@@ -3,6 +3,8 @@ ethers.js
 
 [![npm version](https://badge.fury.io/js/ethers.svg)](https://badge.fury.io/js/ethers)
 
+**NOTE: Because ethers scrypt is [very slow on react-native](https://docs.ethers.io/ethers.js/html/cookbook-react.html#other-notes) this fork depends on a globally injected scrypt library, e.g. [react-native-scrypt](https://github.com/Crypho/react-native-scrypt).**
+
 Complete Ethereum wallet implementation and utilities in JavaScript (and TypeScript).
 
 **Features:**
