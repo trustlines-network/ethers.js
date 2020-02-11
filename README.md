@@ -5,6 +5,19 @@ ethers.js
 
 **NOTE: Because ethers scrypt is [very slow on react-native](https://docs.ethers.io/ethers.js/html/cookbook-react.html#other-notes) this fork depends on a globally injected scrypt library, e.g. [react-native-scrypt](https://github.com/Crypho/react-native-scrypt).**
 
+**Example Usage with react-native-scrypt**
+```js
+// index.js of react-native project
+import RNScrypt from "react-native-scrypt"
+
+if (typeof scrypt === "undefined") {
+  global.scrypt = RNScrypt
+}
+
+//...
+```
+
+
 Complete Ethereum wallet implementation and utilities in JavaScript (and TypeScript).
 
 **Features:**
