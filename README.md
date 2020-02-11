@@ -3,20 +3,7 @@ ethers.js
 
 [![npm version](https://badge.fury.io/js/ethers.svg)](https://badge.fury.io/js/ethers)
 
-**NOTE: Because ethers scrypt is [very slow on react-native](https://docs.ethers.io/ethers.js/html/cookbook-react.html#other-notes) this fork depends on a globally injected scrypt library, e.g. [react-native-scrypt](https://github.com/Crypho/react-native-scrypt).**
-
-**Example Usage with react-native-scrypt**
-```js
-// index.js of react-native project
-import RNScrypt from "react-native-scrypt"
-
-if (typeof scrypt === "undefined") {
-  global.scrypt = RNScrypt
-}
-
-//...
-```
-
+**NOTE: Because ethers scrypt is [very slow on react-native](https://docs.ethers.io/ethers.js/html/cookbook-react.html#other-notes) this fork depends on a globally injected scrypt library, e.g. [react-native-scrypt](https://github.com/Crypho/react-native-scrypt), see [here](#example-usage-with-react-native-scrypt) for an example.**
 
 Complete Ethereum wallet implementation and utilities in JavaScript (and TypeScript).
 
@@ -58,6 +45,20 @@ To use in [node.js](https://nodejs.org/):
 
 ```
 /Users/ethers/my-app> npm install --save ethers
+```
+
+Example Usage with react-native-scrypt
+--------------------------------------
+
+```js
+// index.js of react-native project
+import RNScrypt from "react-native-scrypt"
+
+if (typeof scrypt === "undefined") {
+  global.scrypt = RNScrypt
+}
+
+//...
 ```
 
 
